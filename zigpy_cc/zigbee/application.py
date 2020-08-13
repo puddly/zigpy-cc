@@ -44,6 +44,7 @@ IGNORED = (
     "bdbComissioningNotifcation",
     "dataConfirm",
     "leaveInd",
+    "resetInd",
     "srcRtgInd",
     "stateChangeInd",
     "tcDeviceInd",

@@ -171,12 +171,6 @@ class API:
                 raise Exception("Unknown type '{}'".format(obj.command_type))
 
     def create_response_waiter(self, obj: ZpiObject, sequence=None):
-        waiter = self.get_response_waiter(obj, sequence)
-        if waiter:
-            LOGGER.debug("waiting for %d %s", sequence, obj.command)
-        return waiter
-
-    def get_response_waiter(self, obj: ZpiObject, sequence=None):
         if obj.command_type == CommandType.SREQ and obj.command.startswith(
             "dataRequest"
         ):

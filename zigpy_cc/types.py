@@ -114,5 +114,5 @@ class NetworkOptions(Repr):
             t.ExtendedPanId([0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD, 0xDD])
         )
         self.channelList = (
-            config[zigpy.config.CONF_NWK_CHANNELS] or t.Channels.CHANNEL_11
+            config[zigpy.config.CONF_NWK_CHANNELS] or t.Channels.from_channel_list([11])
         )
